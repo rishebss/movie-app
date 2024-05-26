@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block body %}
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+      <li class="list-group-item"><p><h5>   Your Profile</h5></p></li>
+    <li class="list-group-item">username:{{user.username}}</li>
+    <li class="list-group-item">name:{{user.first_name}}</li>
+    <li class="list-group-item">second name:{{user.last_name}}</li>
+  </ul>
+</div>
+
+{% endblock %}
+
+</body>
+</html>

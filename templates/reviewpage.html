@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+.body{
+background-color:maroon;
+}
+{% block body %}
+{% for i in review %}
+<div class="card" style="width: 28rem; border:3px solid #ccc;">
+  <div class="card-body">
+    <h5 class="card-title">movie name:{{i.name}}</h5>
+    <p class="card-text">review:{{i.review}}</p>
+       <p class="card-text">by:{{user.username}}</p>
+    </div>
+</div>
+<br>
+{% endfor %}
+{% endblock %}
+</body>
+</html>

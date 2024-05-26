@@ -1,0 +1,27 @@
+{% extends 'base.html'%}
+
+{% block body %}
+
+<div class="containter">
+    <div class="row mx-auto" style="gap:50px;">
+        {% for i in movie_list %}
+        <div class="col-md-2">
+            <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{ i.img.url }}" alt="Card image cap" width="100px" height="200px;">
+  <div class="card-body">
+    <h5 class="card-title">{{i.name}}</h5>
+    <p class="card-text">{{i.year}}</p>
+      <a href="{% url  'movie_app:detail' i.id %}" class="btn btn-danger mr-2">details</a>
+      <h7 class="card-text"> uploaded by:{{i.username}}</h7>
+  </div>
+</div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+<!--        body {-->
+<!--      background-image: url('static/images/titanic.png');-->
+<!--      background-size: cover;-->
+<!--      background-position: center;-->
+<!--     }-->
+
+<!--    .content {-->
+<!--      color: white; /* Example text color for better visibility on the background */-->
+<!--      text-align: center;-->
+<!--      padding:20px;-->
+<!--        }-->
+
+    </style>
+</head>
+<body>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<h1> Add Your Review</h1>
+<form action="{% url 'movie_app:revw'  %}" method="post">
+    {% csrf_token %}
+     <input type="text" name="moviereview" placeholder="Enter your review"><br><br>
+    <input type="submit">
+</form>
+
+</body>
+</html>

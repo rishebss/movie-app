@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .link {
+        margin-left:20px;
+        float:left;
+        }
+
+    </style>
+</head>
+<body>
+{% block body %}
+<div class="card" style="width: 400px; height:700px;">
+  <img src="{{movie.img.url}}" style="width:400px; height:350px;" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{movie.name}}</h5>
+    <p class="card-text">{{movie.description}}</p>
+      <p class="card-text"><a href="{{movie.trailer}}"><button type="button" class="btn btn-danger">trailer</button></a></p>
+    </div>
+
+  <div class="card-body">
+      <a href="#"><span class="padding_left_15"><button type="button" class="btn btn-outline-danger mr-3">+reviews</button></span></a>
+      <a class="btn btn-warning" href="{% url 'movie_app:update' movie.id %}">edit</a>
+      <a class="btn btn-warning" href="{% url 'movie_app:delete' movie.id %}">delete</a>
+
+
+  </div>
+
+
+
+
+
+{% endblock %}
+</body>
+</html>
